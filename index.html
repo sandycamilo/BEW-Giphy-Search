@@ -28,9 +28,14 @@
             fetch(path).then(function(res) { 
                 return res.json() 
             }).then(function(json) {
-                console.log(json)
+                console.log(json.data[0].images.fixed_width.url)
+                json.data.forEach(function(obj){
+                    console.log(obj.images.fixed_width.url)
+                })
+            }).catch(function(err) {
+                console.log(err.message)
             })
-        
+            
         </script>
     </body>
 </html>
