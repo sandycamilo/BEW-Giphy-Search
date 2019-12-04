@@ -2,6 +2,22 @@
 <html>
     <head>
         <title>GIPHTASY</title>
+        <style>
+            .container {
+                width: calc(200px * 4 + 3em);
+                margin: auto;
+            }
+
+            .results {
+                columns: 4;
+                column-gap: 1em;
+            }
+
+            .item {
+                margin-bottom: 1em;
+            }
+        
+        </style>
     </head>
     <body>
 
@@ -51,11 +67,12 @@
                         const title = obj.title
 
 
-                        resultsHTML += `<img 
+                        resultsHTML += `<img
+                        class="item"
                         src="${url}" 
                         width="${width}" 
                         height="${height}"
-                        alt="${object.title}">`
+                        alt="${title}">`
                     })
 
                     resultsEl.innerHTML = resultsHTML
